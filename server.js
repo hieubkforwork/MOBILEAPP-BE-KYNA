@@ -10,6 +10,8 @@ const connectDB = require('./db/connect');
 require('dotenv').config();
 
 const User = require('./models/User');
+const job = require('./cron');
+job.start();
 
 const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
